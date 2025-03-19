@@ -153,3 +153,8 @@ input:checked + .slider:before {
 .right-section {
   background-color: #ecf0f1; /* Blue */
 }
+
+.dark-mode {
+  background-color: #463d8c;
+  color: #ecf0f1;
+}

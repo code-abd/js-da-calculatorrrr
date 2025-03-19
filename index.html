@@ -16,7 +16,7 @@
       <div class="toggle">
         <label class="switch">
           <input type="checkbox" id="background-toggle">
-          <span class="slider round" onclick="getToggleValue()"></span>
+          <span class="slider round" onclick="toggleBackgroundMode()"></span>
         </label>
       </div>
 
@@ -49,6 +49,8 @@
           <button class="btn operator" onclick="appendToDisplay('tan(')">tan</button>
           <button class="btn operator" onclick="appendToDisplay('sqrt(')">√</button>
           <button class="btn operator" onclick="appendToDisplay('^')">^</button>
+          <button class="btn operator" onclick="appendToDisplay('(')">(</button>
+          <button class="btn operator" onclick="appendToDisplay(')')">)</button>
         </div>
         <button class="btn clear" onclick="clearDisplay()">C</button>
       </div>
