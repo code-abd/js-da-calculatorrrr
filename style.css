@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  /* display: grid; */
+  /* justify-content: center; */
+  height: 100vh;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.calculator {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  display: inline-block;
+}
+
+.display {
+  width: 90%;
+  height: 50px;
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  font-size: 1.5em;
+  padding: 15px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #e0e0e0;
+}
+
+.operator {
+  background-color: #f9a825;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #f57f17;
+}
+
+.clear {
+  background-color: #d32f2f;
+  color: white;
+  grid-column: span 4;
+}
+
+.clear:hover {
+  background-color: #c62828;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #f9a825;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #f39f21;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle {
+  display: flex;
+  justify-content: end;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* Arrange children horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
+.section {
+  flex: 1; /* Each section will take up an equal amount of space */
+  padding: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+.left-section {
+  background-color: #8373fa; /* Blue */
+}
+
+.right-section {
+  background-color: #ecf0f1; /* Blue */
+}
